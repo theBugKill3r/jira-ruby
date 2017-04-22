@@ -38,6 +38,8 @@ module JIRA
       has_many :issuelinks, :nested_under => 'fields'
 
       has_many :remotelink, :class => JIRA::Resource::Remotelink
+      
+      has_many :labels, :nested_under => 'fields'
 
       def self.all(client)
         url = client.options[:rest_base_path] + "/search?expand=transitions.fields"
