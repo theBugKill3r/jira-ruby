@@ -182,6 +182,10 @@ module JIRA
     def Agile
       JIRA::Resource::AgileFactory.new(self)
     end
+    
+    def Label
+      JIRA::Resource::LabelFactory.new(self)
+    end
 
     # HTTP methods without a body
     def delete(path, headers = {})
